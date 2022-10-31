@@ -289,7 +289,7 @@
                                     }
                                 }
                             },
-                            "body": "{\n    \"tokenId\": \"example\",\n    \"ownerId\": \"example\",\n    \"description\": \"example\",\n    \"createdTime\": \"2022-10-31T18:41:12.614Z\",\n    \"status\": {\n        \"type\": \"active\"\n    }\n}",
+                            "body": "{\n    \"tokenId\": \"example\",\n    \"ownerId\": \"example\",\n    \"description\": \"example\",\n    \"createdTime\": \"2022-10-31T19:33:04.306Z\",\n    \"status\": {\n        \"type\": \"active\"\n    }\n}",
                             "_postman_previewlanguage": "json"
                         }
                     ]
@@ -332,7 +332,7 @@
                                 "header": [],
                                 "method": "GET"
                             },
-                            "body": "[\n    {\n        \"tokenId\": \"example\",\n        \"ownerId\": \"example\",\n        \"description\": \"example\",\n        \"createdTime\": \"2022-10-31T18:41:12.615Z\",\n        \"status\": {\n            \"type\": \"active\"\n        }\n    }\n]",
+                            "body": "[\n    {\n        \"tokenId\": \"example\",\n        \"ownerId\": \"example\",\n        \"description\": \"example\",\n        \"createdTime\": \"2022-10-31T19:33:04.306Z\",\n        \"status\": {\n            \"type\": \"active\"\n        }\n    }\n]",
                             "_postman_previewlanguage": "json"
                         }
                     ]
