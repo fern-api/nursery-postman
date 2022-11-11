@@ -28,19 +28,13 @@
                             "query": []
                         },
                         "header": [],
-                        "method": {
-                            "value": "POST"
-                        },
+                        "method": "POST",
                         "body": {
-                            "mode": {
-                                "value": "raw"
-                            },
+                            "mode": "raw",
                             "raw": "{\n    \"0\": {\n        \"ownerId\": \"example\"\n    },\n    \"1\": {\n        \"data\": \"UNKNOWN\"\n    }\n}",
                             "options": {
                                 "raw": {
-                                    "language": {
-                                        "value": "json"
-                                    }
+                                    "language": "json"
                                 }
                             }
                         }
@@ -61,25 +55,19 @@
                                     "query": []
                                 },
                                 "header": [],
-                                "method": {
-                                    "value": "POST"
-                                },
+                                "method": "POST",
                                 "body": {
-                                    "mode": {
-                                        "value": "raw"
-                                    },
+                                    "mode": "raw",
                                     "raw": "{\n    \"0\": {\n        \"ownerId\": \"example\"\n    },\n    \"1\": {\n        \"data\": \"UNKNOWN\"\n    }\n}",
                                     "options": {
                                         "raw": {
-                                            "language": {
-                                                "value": "json"
-                                            }
+                                            "language": "json"
                                         }
                                     }
                                 }
                             },
                             "body": "",
-                            "postmanPreviewlanguage": "json"
+                            "_postman_previewlanguage": "json"
                         }
                     ]
                 },
@@ -98,9 +86,7 @@
                             "query": []
                         },
                         "header": [],
-                        "method": {
-                            "value": "GET"
-                        }
+                        "method": "GET"
                     },
                     "response": [
                         {
@@ -119,12 +105,10 @@
                                     "query": []
                                 },
                                 "header": [],
-                                "method": {
-                                    "value": "GET"
-                                }
+                                "method": "GET"
                             },
                             "body": "{\n    \"0\": {\n        \"ownerId\": \"example\"\n    },\n    \"1\": {\n        \"data\": \"UNKNOWN\"\n    }\n}",
-                            "postmanPreviewlanguage": "json"
+                            "_postman_previewlanguage": "json"
                         }
                     ]
                 },
@@ -143,19 +127,13 @@
                             "query": []
                         },
                         "header": [],
-                        "method": {
-                            "value": "PUT"
-                        },
+                        "method": "PUT",
                         "body": {
-                            "mode": {
-                                "value": "raw"
-                            },
+                            "mode": "raw",
                             "raw": "{\n    \"0\": {\n        \"data\": \"UNKNOWN\"\n    }\n}",
                             "options": {
                                 "raw": {
-                                    "language": {
-                                        "value": "json"
-                                    }
+                                    "language": "json"
                                 }
                             }
                         }
@@ -177,25 +155,19 @@
                                     "query": []
                                 },
                                 "header": [],
-                                "method": {
-                                    "value": "PUT"
-                                },
+                                "method": "PUT",
                                 "body": {
-                                    "mode": {
-                                        "value": "raw"
-                                    },
+                                    "mode": "raw",
                                     "raw": "{\n    \"0\": {\n        \"data\": \"UNKNOWN\"\n    }\n}",
                                     "options": {
                                         "raw": {
-                                            "language": {
-                                                "value": "json"
-                                            }
+                                            "language": "json"
                                         }
                                     }
                                 }
                             },
                             "body": "{\n    \"0\": {\n        \"ownerId\": \"example\"\n    },\n    \"1\": {\n        \"data\": \"UNKNOWN\"\n    }\n}",
-                            "postmanPreviewlanguage": "json"
+                            "_postman_previewlanguage": "json"
                         }
                     ]
                 }
@@ -219,19 +191,13 @@
                             "query": []
                         },
                         "header": [],
-                        "method": {
-                            "value": "POST"
-                        },
+                        "method": "POST",
                         "body": {
-                            "mode": {
-                                "value": "raw"
-                            },
+                            "mode": "raw",
                             "raw": "{\n    \"0\": {\n        \"ownerId\": \"example\"\n    },\n    \"1\": {\n        \"description\": \"example\"\n    }\n}",
                             "options": {
                                 "raw": {
-                                    "language": {
-                                        "value": "json"
-                                    }
+                                    "language": "json"
                                 }
                             }
                         }
@@ -253,25 +219,19 @@
                                     "query": []
                                 },
                                 "header": [],
-                                "method": {
-                                    "value": "POST"
-                                },
+                                "method": "POST",
                                 "body": {
-                                    "mode": {
-                                        "value": "raw"
-                                    },
+                                    "mode": "raw",
                                     "raw": "{\n    \"0\": {\n        \"ownerId\": \"example\"\n    },\n    \"1\": {\n        \"description\": \"example\"\n    }\n}",
                                     "options": {
                                         "raw": {
-                                            "language": {
-                                                "value": "json"
-                                            }
+                                            "language": "json"
                                         }
                                     }
                                 }
                             },
                             "body": "{\n    \"0\": {\n        \"token\": \"example\"\n    },\n    \"1\": {\n        \"tokenId\": \"example\"\n    }\n}",
-                            "postmanPreviewlanguage": "json"
+                            "_postman_previewlanguage": "json"
                         }
                     ]
                 },
@@ -290,19 +250,13 @@
                             "query": []
                         },
                         "header": [],
-                        "method": {
-                            "value": "POST"
-                        },
+                        "method": "POST",
                         "body": {
-                            "mode": {
-                                "value": "raw"
-                            },
+                            "mode": "raw",
                             "raw": "{\n    \"0\": {\n        \"token\": \"example\"\n    }\n}",
                             "options": {
                                 "raw": {
-                                    "language": {
-                                        "value": "json"
-                                    }
+                                    "language": "json"
                                 }
                             }
                         }
@@ -324,25 +278,19 @@
                                     "query": []
                                 },
                                 "header": [],
-                                "method": {
-                                    "value": "POST"
-                                },
+                                "method": "POST",
                                 "body": {
-                                    "mode": {
-                                        "value": "raw"
-                                    },
+                                    "mode": "raw",
                                     "raw": "{\n    \"0\": {\n        \"token\": \"example\"\n    }\n}",
                                     "options": {
                                         "raw": {
-                                            "language": {
-                                                "value": "json"
-                                            }
+                                            "language": "json"
                                         }
                                     }
                                 }
                             },
                             "body": "{\n    \"0\": {\n        \"tokenId\": \"example\"\n    },\n    \"1\": {\n        \"ownerId\": \"example\"\n    },\n    \"2\": {\n        \"description\": \"example\"\n    },\n    \"3\": {\n        \"createdTime\": \"1994-11-05T13:15:30Z\"\n    },\n    \"4\": {\n        \"status\": {\n            \"type\": \"active\"\n        }\n    }\n}",
-                            "postmanPreviewlanguage": "json"
+                            "_postman_previewlanguage": "json"
                         }
                     ]
                 },
@@ -362,9 +310,7 @@
                             "query": []
                         },
                         "header": [],
-                        "method": {
-                            "value": "GET"
-                        }
+                        "method": "GET"
                     },
                     "response": [
                         {
@@ -384,12 +330,10 @@
                                     "query": []
                                 },
                                 "header": [],
-                                "method": {
-                                    "value": "GET"
-                                }
+                                "method": "GET"
                             },
                             "body": "[\n    {\n        \"0\": {\n            \"tokenId\": \"example\"\n        },\n        \"1\": {\n            \"ownerId\": \"example\"\n        },\n        \"2\": {\n            \"description\": \"example\"\n        },\n        \"3\": {\n            \"createdTime\": \"1994-11-05T13:15:30Z\"\n        },\n        \"4\": {\n            \"status\": {\n                \"type\": \"active\"\n            }\n        }\n    }\n]",
-                            "postmanPreviewlanguage": "json"
+                            "_postman_previewlanguage": "json"
                         }
                     ]
                 }
