@@ -336,6 +336,108 @@
               "_postman_previewlanguage": "json"
             }
           ]
+        },
+        {
+          "name": "revokeTokenById",
+          "request": {
+            "url": {
+              "raw": "{{origin}}/tokens/revoke/:tokenId",
+              "host": [
+                "{{origin}}"
+              ],
+              "path": [
+                "tokens",
+                "revoke",
+                ":tokenId"
+              ],
+              "query": []
+            },
+            "header": [],
+            "method": "POST"
+          },
+          "response": [
+            {
+              "name": "Successful revokeTokenById",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/tokens/revoke/:tokenId",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "tokens",
+                    "revoke",
+                    ":tokenId"
+                  ],
+                  "query": []
+                },
+                "header": [],
+                "method": "POST"
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            }
+          ]
+        },
+        {
+          "name": "revokeToken",
+          "request": {
+            "url": {
+              "raw": "{{origin}}/tokens/revoke",
+              "host": [
+                "{{origin}}"
+              ],
+              "path": [
+                "tokens",
+                "revoke"
+              ],
+              "query": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"example\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "name": "Successful revokeToken",
+              "code": 200,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/tokens/revoke",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "tokens",
+                    "revoke"
+                  ],
+                  "query": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"token\": \"example\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            }
+          ]
         }
       ]
     }
