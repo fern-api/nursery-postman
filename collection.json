@@ -25,13 +25,14 @@
               "path": [
                 "owner"
               ],
-              "query": []
+              "query": [],
+              "variable": []
             },
             "header": [],
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"ownerId\": \"example\",\n  \"data\": \"UNKNOWN\"\n}",
+              "raw": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -42,6 +43,7 @@
           "response": [
             {
               "name": "Successful create",
+              "status": "OK",
               "code": 200,
               "originalRequest": {
                 "url": {
@@ -52,13 +54,45 @@
                   "path": [
                     "owner"
                   ],
-                  "query": []
+                  "query": [],
+                  "variable": []
                 },
                 "header": [],
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"ownerId\": \"example\",\n  \"data\": \"UNKNOWN\"\n}",
+                  "raw": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Failed create (OwnerAlreadyExistsError)",
+              "status": "OwnerAlreadyExistsError",
+              "code": 400,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/owner",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "owner"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"ownerId\": \"duplicate-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -83,7 +117,13 @@
                 "owner",
                 ":ownerId"
               ],
-              "query": []
+              "query": [],
+              "variable": [
+                {
+                  "key": "ownerId",
+                  "value": "some-owner-id"
+                }
+              ]
             },
             "header": [],
             "method": "GET"
@@ -91,6 +131,7 @@
           "response": [
             {
               "name": "Successful get",
+              "status": "OK",
               "code": 200,
               "originalRequest": {
                 "url": {
@@ -102,12 +143,46 @@
                     "owner",
                     ":ownerId"
                   ],
-                  "query": []
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "some-owner-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "GET"
               },
-              "body": "{\n  \"ownerId\": \"example\",\n  \"data\": \"UNKNOWN\"\n}",
+              "body": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Failed get (OwnerNotFoundError)",
+              "status": "OwnerNotFoundError",
+              "code": 404,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/owner/:ownerId",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "owner",
+                    ":ownerId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "missing-owner-id"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "",
               "_postman_previewlanguage": "json"
             }
           ]
@@ -124,13 +199,19 @@
                 "owner",
                 ":ownerId"
               ],
-              "query": []
+              "query": [],
+              "variable": [
+                {
+                  "key": "ownerId",
+                  "value": "some-owner-id"
+                }
+              ]
             },
             "header": [],
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"data\": \"UNKNOWN\"\n}",
+              "raw": "{\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -141,6 +222,7 @@
           "response": [
             {
               "name": "Successful update",
+              "status": "OK",
               "code": 200,
               "originalRequest": {
                 "url": {
@@ -152,13 +234,19 @@
                     "owner",
                     ":ownerId"
                   ],
-                  "query": []
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "some-owner-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "PUT",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": \"UNKNOWN\"\n}",
+                  "raw": "{\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -166,7 +254,44 @@
                   }
                 }
               },
-              "body": "{\n  \"ownerId\": \"example\",\n  \"data\": \"UNKNOWN\"\n}",
+              "body": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Failed update (OwnerNotFoundError)",
+              "status": "OwnerNotFoundError",
+              "code": 404,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/owner/:ownerId",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "owner",
+                    ":ownerId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "missing-owner-id"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "",
               "_postman_previewlanguage": "json"
             }
           ]
@@ -188,13 +313,14 @@
                 "tokens",
                 "create"
               ],
-              "query": []
+              "query": [],
+              "variable": []
             },
             "header": [],
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"ownerId\": \"example\",\n  \"description\": \"example\"\n}",
+              "raw": "{\n    \"ownerId\": \"some-owner-id\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -205,6 +331,7 @@
           "response": [
             {
               "name": "Successful create",
+              "status": "OK",
               "code": 200,
               "originalRequest": {
                 "url": {
@@ -216,13 +343,14 @@
                     "tokens",
                     "create"
                   ],
-                  "query": []
+                  "query": [],
+                  "variable": []
                 },
                 "header": [],
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"ownerId\": \"example\",\n  \"description\": \"example\"\n}",
+                  "raw": "{\n    \"ownerId\": \"some-owner-id\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -230,7 +358,39 @@
                   }
                 }
               },
-              "body": "{\n  \"token\": \"example\",\n  \"tokenId\": \"example\"\n}",
+              "body": "{\n    \"token\": \"token-value\",\n    \"tokenId\": \"token-id\"\n}",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Failed create (OwnerNotFoundError)",
+              "status": "OwnerNotFoundError",
+              "code": 404,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/tokens/create",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "tokens",
+                    "create"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"ownerId\": \"missing-owner-id\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "",
               "_postman_previewlanguage": "json"
             }
           ]
@@ -247,13 +407,14 @@
                 "tokens",
                 "metadata"
               ],
-              "query": []
+              "query": [],
+              "variable": []
             },
             "header": [],
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"token\": \"example\"\n}",
+              "raw": "{\n    \"token\": \"token-value\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -264,6 +425,7 @@
           "response": [
             {
               "name": "Successful getTokenMetadata",
+              "status": "OK",
               "code": 200,
               "originalRequest": {
                 "url": {
@@ -275,13 +437,14 @@
                     "tokens",
                     "metadata"
                   ],
-                  "query": []
+                  "query": [],
+                  "variable": []
                 },
                 "header": [],
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"token\": \"example\"\n}",
+                  "raw": "{\n    \"token\": \"token-value\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -289,7 +452,39 @@
                   }
                 }
               },
-              "body": "{\n  \"tokenId\": \"example\",\n  \"ownerId\": \"example\",\n  \"description\": \"example\",\n  \"createdTime\": \"1994-11-05T13:15:30Z\",\n  \"status\": {\n    \"type\": \"active\"\n  }\n}",
+              "body": "{\n    \"tokenId\": \"token-id\",\n    \"ownerId\": \"some-owner-id\",\n    \"createdTime\": \"2022-12-23T10:43:35Z\",\n    \"status\": {\n        \"type\": \"active\"\n    }\n}",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Failed getTokenMetadata (TokenNotFoundError)",
+              "status": "TokenNotFoundError",
+              "code": 404,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/tokens/metadata",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "tokens",
+                    "metadata"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"token\": \"missing-token-value\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "",
               "_postman_previewlanguage": "json"
             }
           ]
@@ -307,7 +502,13 @@
                 "owner",
                 ":ownerId"
               ],
-              "query": []
+              "query": [],
+              "variable": [
+                {
+                  "key": "ownerId",
+                  "value": "some-owner-id"
+                }
+              ]
             },
             "header": [],
             "method": "GET"
@@ -315,6 +516,7 @@
           "response": [
             {
               "name": "Successful getTokensForOwner",
+              "status": "OK",
               "code": 200,
               "originalRequest": {
                 "url": {
@@ -327,12 +529,47 @@
                     "owner",
                     ":ownerId"
                   ],
-                  "query": []
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "some-owner-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "GET"
               },
-              "body": "[\n  {\n    \"tokenId\": \"example\",\n    \"ownerId\": \"example\",\n    \"description\": \"example\",\n    \"createdTime\": \"1994-11-05T13:15:30Z\",\n    \"status\": {\n      \"type\": \"active\"\n    }\n  }\n]",
+              "body": "[\n    {\n        \"tokenId\": \"token-id\",\n        \"ownerId\": \"some-owner-id\",\n        \"createdTime\": \"2022-12-23T10:43:35Z\",\n        \"status\": {\n            \"type\": \"active\"\n        }\n    }\n]",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Failed getTokensForOwner (OwnerNotFoundError)",
+              "status": "OwnerNotFoundError",
+              "code": 404,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/tokens/owner/:ownerId",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "tokens",
+                    "owner",
+                    ":ownerId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "missing-owner-id"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "",
               "_postman_previewlanguage": "json"
             }
           ]
@@ -350,7 +587,13 @@
                 "revoke",
                 ":tokenId"
               ],
-              "query": []
+              "query": [],
+              "variable": [
+                {
+                  "key": "tokenId",
+                  "value": "some-token-id"
+                }
+              ]
             },
             "header": [],
             "method": "POST"
@@ -358,6 +601,7 @@
           "response": [
             {
               "name": "Successful revokeTokenById",
+              "status": "OK",
               "code": 200,
               "originalRequest": {
                 "url": {
@@ -370,7 +614,42 @@
                     "revoke",
                     ":tokenId"
                   ],
-                  "query": []
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "tokenId",
+                      "value": "some-token-id"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "POST"
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Failed revokeTokenById (TokenNotFoundError)",
+              "status": "TokenNotFoundError",
+              "code": 404,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/tokens/revoke/:tokenId",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "tokens",
+                    "revoke",
+                    ":tokenId"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "tokenId",
+                      "value": "missing-token-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "POST"
@@ -392,13 +671,14 @@
                 "tokens",
                 "revoke"
               ],
-              "query": []
+              "query": [],
+              "variable": []
             },
             "header": [],
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"token\": \"example\"\n}",
+              "raw": "{\n    \"token\": \"some-token-value\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -409,6 +689,7 @@
           "response": [
             {
               "name": "Successful revokeToken",
+              "status": "OK",
               "code": 200,
               "originalRequest": {
                 "url": {
@@ -420,13 +701,46 @@
                     "tokens",
                     "revoke"
                   ],
-                  "query": []
+                  "query": [],
+                  "variable": []
                 },
                 "header": [],
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"token\": \"example\"\n}",
+                  "raw": "{\n    \"token\": \"some-token-value\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "",
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "name": "Failed revokeToken (TokenNotFoundError)",
+              "status": "TokenNotFoundError",
+              "code": 404,
+              "originalRequest": {
+                "url": {
+                  "raw": "{{origin}}/tokens/revoke",
+                  "host": [
+                    "{{origin}}"
+                  ],
+                  "path": [
+                    "tokens",
+                    "revoke"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"token\": \"missing-token-value\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
