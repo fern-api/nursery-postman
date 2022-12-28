@@ -32,7 +32,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+              "raw": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"custom-key\": \"custom-value\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -61,7 +61,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+                  "raw": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"custom-key\": \"custom-value\"\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -92,7 +92,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"ownerId\": \"duplicate-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+                  "raw": "{\n    \"ownerId\": \"duplicate-owner-id\",\n    \"data\": {\n        \"custom-key\": \"custom-value\"\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -154,7 +154,7 @@
                 "header": [],
                 "method": "GET"
               },
-              "body": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+              "body": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"custom-key\": \"custom-value\"\n    }\n}",
               "_postman_previewlanguage": "json"
             },
             {
@@ -211,7 +211,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+              "raw": "{\n    \"data\": {\n        \"custom-key\": \"custom-value\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -246,7 +246,7 @@
                 "method": "PUT",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+                  "raw": "{\n    \"data\": {\n        \"custom-key\": \"custom-value\"\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -254,7 +254,7 @@
                   }
                 }
               },
-              "body": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+              "body": "{\n    \"ownerId\": \"some-owner-id\",\n    \"data\": {\n        \"custom-key\": \"custom-value\"\n    }\n}",
               "_postman_previewlanguage": "json"
             },
             {
@@ -283,7 +283,7 @@
                 "method": "PUT",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"data\": {\n        \"key\": \"value\"\n    }\n}",
+                  "raw": "{\n    \"data\": {\n        \"custom-key\": \"custom-value\"\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -358,7 +358,7 @@
                   }
                 }
               },
-              "body": "{\n    \"token\": \"token-value\",\n    \"tokenId\": \"token-id\"\n}",
+              "body": "{\n    \"token\": \"some-token-value\",\n    \"tokenId\": \"some-token-id\"\n}",
               "_postman_previewlanguage": "json"
             },
             {
@@ -452,7 +452,7 @@
                   }
                 }
               },
-              "body": "{\n    \"tokenId\": \"token-id\",\n    \"ownerId\": \"some-owner-id\",\n    \"createdTime\": \"2022-12-23T10:43:35Z\",\n    \"status\": {\n        \"type\": \"active\"\n    }\n}",
+              "body": "{\n    \"tokenId\": \"some-token-id\",\n    \"ownerId\": \"some-owner-id\",\n    \"createdTime\": \"2022-12-23T10:43:35Z\",\n    \"status\": {\n        \"type\": \"active\"\n    }\n}",
               "_postman_previewlanguage": "json"
             },
             {
@@ -540,7 +540,7 @@
                 "header": [],
                 "method": "GET"
               },
-              "body": "[\n    {\n        \"tokenId\": \"token-id\",\n        \"ownerId\": \"some-owner-id\",\n        \"createdTime\": \"2022-12-23T10:43:35Z\",\n        \"status\": {\n            \"type\": \"active\"\n        }\n    }\n]",
+              "body": "[\n    {\n        \"tokenId\": \"some-token-id\",\n        \"ownerId\": \"some-owner-id\",\n        \"createdTime\": \"2022-12-23T10:43:35Z\",\n        \"status\": {\n            \"type\": \"active\"\n        }\n    }\n]",
               "_postman_previewlanguage": "json"
             },
             {
