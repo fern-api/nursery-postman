@@ -118,7 +118,12 @@
                 ":ownerId"
               ],
               "query": [],
-              "variable": []
+              "variable": [
+                {
+                  "key": "ownerId",
+                  "value": "some-owner-id"
+                }
+              ]
             },
             "header": [],
             "method": "GET"
@@ -139,7 +144,12 @@
                     ":ownerId"
                   ],
                   "query": [],
-                  "variable": []
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "some-owner-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "GET"
@@ -162,7 +172,12 @@
                     ":ownerId"
                   ],
                   "query": [],
-                  "variable": []
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "missing-owner-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "GET"
@@ -185,7 +200,12 @@
                 ":ownerId"
               ],
               "query": [],
-              "variable": []
+              "variable": [
+                {
+                  "key": "ownerId",
+                  "value": "some-owner-id"
+                }
+              ]
             },
             "header": [],
             "method": "PUT",
@@ -215,7 +235,12 @@
                     ":ownerId"
                   ],
                   "query": [],
-                  "variable": []
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "some-owner-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "PUT",
@@ -247,7 +272,12 @@
                     ":ownerId"
                   ],
                   "query": [],
-                  "variable": []
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "missing-owner-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "PUT",
@@ -473,7 +503,12 @@
                 ":ownerId"
               ],
               "query": [],
-              "variable": []
+              "variable": [
+                {
+                  "key": "ownerId",
+                  "value": "some-owner-id"
+                }
+              ]
             },
             "header": [],
             "method": "GET"
@@ -495,7 +530,12 @@
                     ":ownerId"
                   ],
                   "query": [],
-                  "variable": []
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "some-owner-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "GET"
@@ -519,7 +559,12 @@
                     ":ownerId"
                   ],
                   "query": [],
-                  "variable": []
+                  "variable": [
+                    {
+                      "key": "ownerId",
+                      "value": "missing-owner-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "GET"
@@ -543,7 +588,12 @@
                 ":tokenId"
               ],
               "query": [],
-              "variable": []
+              "variable": [
+                {
+                  "key": "tokenId",
+                  "value": "some-token-id"
+                }
+              ]
             },
             "header": [],
             "method": "POST"
@@ -565,7 +615,12 @@
                     ":tokenId"
                   ],
                   "query": [],
-                  "variable": []
+                  "variable": [
+                    {
+                      "key": "tokenId",
+                      "value": "some-token-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "POST"
@@ -589,7 +644,12 @@
                     ":tokenId"
                   ],
                   "query": [],
-                  "variable": []
+                  "variable": [
+                    {
+                      "key": "tokenId",
+                      "value": "missing-token-id"
+                    }
+                  ]
                 },
                 "header": [],
                 "method": "POST"
